@@ -22,6 +22,7 @@ export abstract class MultiActionChip extends Chip {
     }
 
     const {ariaLabel} = this as ARIAMixinStrict;
+    // TODO(b/350810013): remove the label property.
     return `Remove ${ariaLabel || this.label}`;
   }
   set ariaLabelRemove(ariaLabel: string | null) {

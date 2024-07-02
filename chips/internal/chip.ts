@@ -45,8 +45,11 @@ export abstract class Chip extends chipBaseClass {
   @property({type: Boolean, attribute: 'always-focusable'})
   alwaysFocusable = false;
 
+  // TODO(b/350810013): remove the label property.
   /**
    * The label of the chip.
+   *
+   * @deprecated Set text as content of the chip instead.
    */
   @property() label = '';
 
@@ -124,12 +127,15 @@ export abstract class Chip extends chipBaseClass {
   protected abstract renderPrimaryAction(content: unknown): unknown;
 
   private renderPrimaryContent() {
+    // TODO(http://b/350810013): remove ternary when label property is removed.
     return html`
       <span class="leading icon" aria-hidden="true">
         ${this.renderLeadingIcon()}
       </span>
       <span class="label">
-        <span class="label-text">${this.label}</span>
+        <span class="label-text">
+          ${this.label ? this.label : html`<slot></slot>`}
+        </span>
       </span>
       <span class="touch"></span>
     `;

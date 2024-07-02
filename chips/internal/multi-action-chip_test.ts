@@ -223,6 +223,7 @@ describe('Multi-action chips', () => {
 
     it('should provide a default "ariaLabelRemove" value', async () => {
       const chip = await setupTest();
+      // TODO(b/350810013): remove the label property.
       chip.label = 'Label';
 
       expect(chip.ariaLabelRemove).toEqual(`Remove ${chip.label}`);
@@ -230,6 +231,7 @@ describe('Multi-action chips', () => {
 
     it('should provide a default "ariaLabelRemove" when "ariaLabel" is provided', async () => {
       const chip = await setupTest();
+      // TODO(b/350810013): remove the label property.
       chip.label = 'Label';
       chip.ariaLabel = 'Descriptive label';
 
@@ -238,6 +240,7 @@ describe('Multi-action chips', () => {
 
     it('should allow setting a custom "ariaLabelRemove"', async () => {
       const chip = await setupTest();
+      // TODO(b/350810013): remove the label property.
       chip.label = 'Label';
       chip.ariaLabel = 'Descriptive label';
       const customAriaLabelRemove = 'Remove custom label';
