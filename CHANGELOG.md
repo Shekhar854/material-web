@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.0](https://github.com/material-components/material-web/compare/v1.5.1...v2.0.0) (2024-07-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* `querySelector` for `[role]` and `[aria-*]` attributes may no longer work. See `@material/web/migrations/v2/README.md` and `@material/web/migrations/v2/query-selector-aria.ts`.
+
+### Bug Fixes
+
+* aria-labels announcing twice with "group" on components ([5df9410](https://github.com/material-components/material-web/commit/5df9410e604cf446c83bb5ada3454596c34b2c50))
+* **chips:** add truncation support ([713f0a8](https://github.com/material-components/material-web/commit/713f0a80fcfc9ef730e1c1f88e15098b9d10735b))
+
 ## [1.5.1](https://github.com/material-components/material-web/compare/v1.5.0...v1.5.1) (2024-06-25)
 
 
